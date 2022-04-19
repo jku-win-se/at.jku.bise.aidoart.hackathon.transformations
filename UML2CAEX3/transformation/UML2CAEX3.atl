@@ -1,0 +1,64 @@
+-- @nsURI UML=http://www.eclipse.org/uml2/5.0.0/UML
+-- @path CAEX3=/Sysml2CAEX/caex30/CAEX30.ecore
+
+module UML2CAEX3;
+create OUT : CAEX3 from IN : UML;
+
+helper def : root: CAEX3!CAEXFile = OclUndefined; -- Global variable
+helper def : SUC: CAEX3!SystemUnitClassLib = OclUndefined; -- Global variable
+
+
+rule toCAEXModel{
+	from 
+		input : UML!Model
+	to 
+		out : CAEX3!CAEXFile (
+           fileName <- input.name
+		)
+	do{
+    	thisModule.root <- out;
+  	}
+}
+
+rule toSysUnitLibs{
+	from
+		input: UML!Package (input.isPackageNmae('context'))
+	to
+		out : CAEX3!SystemUnitClassLib(
+			name <- input.name	
+		)
+	do{
+		thisModule.root.systemUnitClassLib <- out;
+    	thisModule.SUC <- out;
+  	}
+}
+
+
+rule toInteralElement {
+	from 
+		input : UML!Class (input.hasStereoType('Block'))
+	to 
+		out : CAEX3!SystemUnitClass (
+           name <- input.name
+		)
+	do{
+		thisModule.SUC.systemUnitClass <- out;
+	}
+}
+
+
+
+helper context UML!Class def: hasStereoType (s : String) : Boolean =
+	if self.getAppliedStereotypes() -> select(e | e.name =s ) -> notEmpty() then
+		true
+	else
+		false
+	endif;
+
+helper context UML!Package def: isPackageNmae (s : String) : Boolean =
+	if self.getName() =s then
+		true
+	else
+		false
+	endif;
+	
