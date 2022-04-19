@@ -4,8 +4,8 @@
 module UML2CAEX3;
 create OUT : CAEX3 from IN : UML;
 
-helper def : root: CAEX3!CAEXFile = OclUndefined; -- Global variable
-helper def : SUC: CAEX3!SystemUnitClassLib = OclUndefined; -- Global variable
+helper def : root: CAEX3!CAEXFile = OclUndefined; -- Global variable --
+helper def : SUC: CAEX3!SystemUnitClassLib = OclUndefined; -- Global variable --
 
 
 rule toCAEXModel{
