@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<caex:CAEXFile xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:caex="http://www.dke.de/CAEX/300" fileName="test">
+  <systemUnitClassLib name="context">
+    <systemUnitClass name="Motor"/>
+    <systemUnitClass name="Ttable"/>
+    <systemUnitClass name="InductiveSensor"/>
+    <systemUnitClass name="Turntable"/>
+  </systemUnitClassLib>
+</caex:CAEXFile>

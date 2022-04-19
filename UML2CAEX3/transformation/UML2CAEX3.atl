@@ -8,7 +8,7 @@ helper def : root: CAEX3!CAEXFile = OclUndefined; -- Global variable
 helper def : SUC: CAEX3!SystemUnitClassLib = OclUndefined; -- Global variable
 
 
-rule toCAEXModel{
+rule Model2CaexFile{
 	from 
 		input : UML!Model
 	to 
@@ -20,9 +20,9 @@ rule toCAEXModel{
   	}
 }
 
-rule toSysUnitLibs{
+rule Package2SUC{
 	from
-		input: UML!Package (input.isPackageNmae('context'))
+		input: UML!Package (input.isPackageName('context'))
 	to
 		out : CAEX3!SystemUnitClassLib(
 			name <- input.name	
@@ -34,9 +34,9 @@ rule toSysUnitLibs{
 }
 
 
-rule toInteralElement {
+rule Block2SUC {
 	from 
-		input : UML!Class (input.hasStereoType('Block'))
+		input : UML!Class (input.hasStereotype('Block'))
 	to 
 		out : CAEX3!SystemUnitClass (
            name <- input.name
@@ -48,14 +48,14 @@ rule toInteralElement {
 
 
 
-helper context UML!Class def: hasStereoType (s : String) : Boolean =
+helper context UML!Class def: hasStereotype (s : String) : Boolean =
 	if self.getAppliedStereotypes() -> select(e | e.name =s ) -> notEmpty() then
 		true
 	else
 		false
 	endif;
 
-helper context UML!Package def: isPackageNmae (s : String) : Boolean =
+helper context UML!Package def: isPackageName (s : String) : Boolean =
 	if self.getName() =s then
 		true
 	else
