@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:AutomationML="http:///schemas/AutomationML/_WavNwL__EeyAGZT21TR02w/9" xmlns:Blocks="http://www.eclipse.org/papyrus/sysml/1.6/SysML/Blocks" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http:///schemas/AutomationML/_WavNwL__EeyAGZT21TR02w/9 ../AutomationML/AutomationML.profile.uml#_Wav00L__EeyAGZT21TR02w http://www.eclipse.org/papyrus/sysml/1.6/SysML/Blocks http://www.eclipse.org/papyrus/sysml/1.6/SysML#//blocks">
+<xmi:XMI xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:AutomationML="http:///schemas/AutomationML/_DLHwYMGCEeymroYRtspLlA/11" xmlns:Blocks="http://www.eclipse.org/papyrus/sysml/1.6/SysML/Blocks" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xsi:schemaLocation="http:///schemas/AutomationML/_DLHwYMGCEeymroYRtspLlA/11 ../AutomationML/AutomationML.profile.uml#_DLI-gMGCEeymroYRtspLlA http://www.eclipse.org/papyrus/sysml/1.6/SysML/Blocks http://www.eclipse.org/papyrus/sysml/1.6/SysML#//blocks">
   <uml:Model xmi:id="_Hj_fIMADEeyAGZT21TR02w" name="SysMLexample">
     <packageImport xmi:type="uml:PackageImport" xmi:id="_HlgiEMADEeyAGZT21TR02w">
       <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
@@ -24,8 +24,8 @@
         <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_DeGyYMAEEeyAGZT21TR02w"/>
         <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_DeGyYcAEEeyAGZT21TR02w" value="1"/>
       </ownedAttribute>
-      <ownedAttribute xmi:type="uml:Port" xmi:id="_SSdXgMAEEeyAGZT21TR02w" name="Port5" aggregation="composite"/>
-      <ownedAttribute xmi:type="uml:Port" xmi:id="_al5NUMAEEeyAGZT21TR02w" name="Port7" aggregation="composite"/>
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_SSdXgMAEEeyAGZT21TR02w" name="Port5" type="_iuB9gMGCEeymroYRtspLlA" aggregation="composite"/>
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_al5NUMAEEeyAGZT21TR02w" name="Port7" visibility="protected" type="_iuB9gMGCEeymroYRtspLlA" aggregation="composite"/>
       <ownedConnector xmi:type="uml:Connector" xmi:id="_Yv5VAMAEEeyAGZT21TR02w" name="Connector6">
         <end xmi:type="uml:ConnectorEnd" xmi:id="_Yv6jIMAEEeyAGZT21TR02w" partWithPort="_CvKBssAEEeyAGZT21TR02w" role="_UdkkMMAEEeyAGZT21TR02w"/>
         <end xmi:type="uml:ConnectorEnd" xmi:id="_Yv7KMMAEEeyAGZT21TR02w" partWithPort="_DeGLU8AEEeyAGZT21TR02w" role="_Q5CGcMAEEeyAGZT21TR02w"/>
@@ -92,6 +92,7 @@
       <ownedEnd xmi:type="uml:Property" xmi:id="_X58H8sAFEeyAGZT21TR02w" name="a14" type="_Us3vAMAFEeyAGZT21TR02w" aggregation="composite" association="_X57g4MAFEeyAGZT21TR02w"/>
       <ownedEnd xmi:type="uml:Property" xmi:id="_X59WEMAFEeyAGZT21TR02w" name="a" type="_HlvyoMADEeyAGZT21TR02w" association="_X57g4MAFEeyAGZT21TR02w"/>
     </packagedElement>
+    <packagedElement xmi:type="uml:Class" xmi:id="_iuB9gMGCEeymroYRtspLlA" name="MechanicalInterface"/>
     <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_HkcLEMADEeyAGZT21TR02w">
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_HkcyIMADEeyAGZT21TR02w" source="http://www.eclipse.org/uml2/2.0.0/UML">
         <references xmi:type="ecore:EPackage" href="http://www.eclipse.org/papyrus/sysml/1.6/SysML#/"/>
@@ -153,8 +154,15 @@
       <appliedProfile xmi:type="uml:Profile" href="pathmap://UML_PROFILES/Standard.profile.uml#_0"/>
     </profileApplication>
     <profileApplication xmi:type="uml:ProfileApplication" xmi:id="_WI0agMADEeyAGZT21TR02w">
+      <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_dn1fwMGCEeymroYRtspLlA" source="PapyrusVersion">
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_dn1fwcGCEeymroYRtspLlA" key="Version" value="0.0.12"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_dn1fwsGCEeymroYRtspLlA" key="Comment" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_dn1fw8GCEeymroYRtspLlA" key="Copyright" value=""/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_dn1fxMGCEeymroYRtspLlA" key="Date" value="2022-04-21"/>
+        <details xmi:type="ecore:EStringToStringMapEntry" xmi:id="_dn1fxcGCEeymroYRtspLlA" key="Author" value=""/>
+      </eAnnotations>
       <eAnnotations xmi:type="ecore:EAnnotation" xmi:id="_WI1BkMADEeyAGZT21TR02w" source="http://www.eclipse.org/uml2/2.0.0/UML">
-        <references xmi:type="ecore:EPackage" href="../AutomationML/AutomationML.profile.uml#_Wav00L__EeyAGZT21TR02w"/>
+        <references xmi:type="ecore:EPackage" href="../AutomationML/AutomationML.profile.uml#_DLI-gMGCEeymroYRtspLlA"/>
       </eAnnotations>
       <appliedProfile xmi:type="uml:Profile" href="../AutomationML/AutomationML.profile.uml#_Rip68L_zEeyAGZT21TR02w"/>
     </profileApplication>
@@ -185,4 +193,6 @@
   <AutomationML:ExtI xmi:id="_rxMZEMBvEeyAGZT21TR02w" base_Port="_d1ANoMAEEeyAGZT21TR02w"/>
   <AutomationML:IL xmi:id="_Bw38cMBwEeyAGZT21TR02w" base_Connector="_exr4UMAEEeyAGZT21TR02w"/>
   <AutomationML:IL xmi:id="_C2TTcMBwEeyAGZT21TR02w" base_Connector="_hOPaUMAEEeyAGZT21TR02w"/>
+  <Blocks:Block xmi:id="_iuG2AMGCEeymroYRtspLlA" base_Class="_iuB9gMGCEeymroYRtspLlA"/>
+  <AutomationML:IC xmi:id="_oBmI4MGCEeymroYRtspLlA" base_Class="_iuB9gMGCEeymroYRtspLlA"/>
 </xmi:XMI>
