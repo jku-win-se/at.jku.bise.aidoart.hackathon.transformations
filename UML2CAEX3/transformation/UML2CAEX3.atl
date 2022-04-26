@@ -9,6 +9,7 @@ helper def : IH: CAEX3!InstanceHierarchy = OclUndefined; -- Global variable
 helper def : RCLib: CAEX3!RoleClassLib = OclUndefined; -- Global variable
 helper def : ICLib: CAEX3!InterfaceClassLib = OclUndefined; -- Global variable
 
+--helper def : ExtIMap: Map (UML!Port, CAEX3!ExternalInterface) = Map {}; -- Global variable
 
 
 rule Model2CaexFile{
@@ -47,11 +48,17 @@ rule Block2SUC {
 	from 
 		input : UML!Class (input.hasStereotype('Block') and input.hasStereotype('SUC'))
 	to 
-		out : CAEX3!SystemUnitClass (
+		suc : CAEX3!SystemUnitClass (
            name <- input.name		   
-		)
+		),
+		ie : CAEX3!InternalElement  (
+			name <- input.name ,
+			externalInterface <- input.getOwnedPorts()  ->  collect(e | thisModule.getExtI(e) )
+			)
 	do{
-		thisModule.SUCLib.systemUnitClass <- out;
+		thisModule.SUCLib.systemUnitClass <- suc;
+		thisModule.IH.internalElement <- ie;  -- temporary
+		
 	}
 }
 
@@ -80,6 +87,16 @@ rule Block2IE {
 	}
 }
 
+ lazy rule getExtI {
+   from
+     i: UML!Port 
+   to 
+     rel: CAEX3!ExternalInterface (
+     	name <- i.name,
+		baseClass <- i.type
+     )
+ }
+ 
 
 helper context UML!Class def: hasStereotype (s : String) : Boolean =
 	if self.getAppliedStereotypes() -> select(e | e.name =s ) -> notEmpty() then
@@ -87,5 +104,13 @@ helper context UML!Class def: hasStereotype (s : String) : Boolean =
 	else
 		false
 	endif;
+
+
+--helper context UML!Port def: isChildOf (s : String) : Boolean =
+--	if self.getNearestPackage().name = s then
+--		true
+--	else
+--		false
+--	endif;
 
 	
