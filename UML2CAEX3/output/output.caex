@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<caex:CAEXFile xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:caex="http://www.dke.de/CAEX/300" fileName="SysMLexample">
+  <instanceHierarchy name="SysMLexampleIH">
+    <internalElement name="A">
+      <attribute name="serialNumber" attributeDataType="Integer"/>
+      <attribute name="brand" attributeDataType="String"/>
+      <externalInterface xsi:type="caex:ExternalInterface" name="Port5" baseClass="//@interfaceClassLib.0/@interfaceClass.0"/>
+      <externalInterface xsi:type="caex:ExternalInterface" name="Port7" baseClass="//@interfaceClassLib.0/@interfaceClass.0"/>
+    </internalElement>
+    <internalElement name="B"/>
+    <internalElement name="C"/>
+    <internalElement name="A11">
+      <externalInterface xsi:type="caex:ExternalInterface" name="Port1" baseClass="//@interfaceClassLib.0/@interfaceClass.0"/>
+      <externalInterface xsi:type="caex:ExternalInterface" name="Port2" baseClass="//@interfaceClassLib.0/@interfaceClass.0"/>
+    </internalElement>
+    <internalElement name="A12">
+      <attribute name="brand" attributeDataType="String"/>
+      <externalInterface xsi:type="caex:ExternalInterface" name="Port3"/>
+      <externalInterface xsi:type="caex:ExternalInterface" name="Port4"/>
+    </internalElement>
+    <internalElement name="D"/>
+  </instanceHierarchy>
+  <interfaceClassLib name="SysMLexampleICLib">
+    <interfaceClass name="MechanicalInterface"/>
+  </interfaceClassLib>
+  <roleClassLib name="SysMLexampleRCLib"/>
+  <systemUnitClassLib name="SysMLexampleSUCLib">
+    <systemUnitClass name="A"/>
+    <systemUnitClass name="B"/>
+    <systemUnitClass name="C"/>
+    <systemUnitClass name="A11"/>
+    <systemUnitClass name="A12"/>
+    <systemUnitClass name="D"/>
+  </systemUnitClassLib>
+</caex:CAEXFile>
