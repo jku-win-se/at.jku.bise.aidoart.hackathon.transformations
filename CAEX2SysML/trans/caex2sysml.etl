@@ -25,7 +25,7 @@ post{
 
 rule CAEX2SysML
 	transform s : CAEX30!CAEXFile
-	to t : UML!Model, rp:UML!Package{
+	to t : UML!Model, rootpackage:UML!Package{
 		("runing CAEX2SysML ... ").println();
 		t.name = s.fileName;	
 		t.applyProfile(ecoreProfile);
@@ -40,10 +40,12 @@ rule CAEX2SysML
 		t.applyProfile(requirementsProfile); // because SysML includes many profile packages
 		t.applyProfile(amlProfile);
 		
-		rp.name=s.fileName;		
-		rp.appendEquivalentsOfChildrenOf(s.instanceHierarchy.internalElement);
-		t.packagedElement.add(rp);
-		t.addStereotypes(rp);
+		rootpackage.name="root_"+s.fileName;	
+			
+		var rr = s.instanceHierarchy.internalElement.first();
+		rootpackage.appendEquivalentsOfChildrenOf(s.instanceHierarchy.internalElement);
+		t.packagedElement.add(rootpackage);
+		t.addStereotypes(rootpackage);
 	}
 	
 	
@@ -57,21 +59,17 @@ rule IE2Class
 operation Any addStereotypes(r : Any) {
  	var elements : Sequence = r.getPackagedElements().asSequence(); 
  	for(i in elements){
- 		("--Adding Stereotypes to : "+i).println();
+ 		("--Adding Stereotypes to : "+i.name).println();
  		i.applyStereotype(blockStereotype);
  		i.applyStereotype(sucStereotype);
  	}
 }
 
 operation Any appendEquivalentsOfChildrenOf(source : Any) {	
-	self.packagedElement ::= source;
 	for (child in source) {
-			('--child name lvl 0: '+child.name).println();
-//			('inner child is: '+child.internalElement.notEmpty()).println();
 			if(child.internalElement.notEmpty()){
-				('child.internalElement is::: '+child.internalElement).println();
 				for (ch in child.internalElement) {
-					('--child name lvl 1: '+ch.name).println();
+					self.packagedElement ::=ch;
 					self.appendEquivalentsOfChildrenOf(ch);
 				}
 			}
