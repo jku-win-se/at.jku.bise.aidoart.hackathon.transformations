@@ -1,0 +1,17 @@
+pre {
+	"Running ETL".println();
+
+}
+
+post{
+
+}
+
+	
+rule Class2IE 
+	transform cl : UML!Class
+	to ie : CAEX30!InternalElement{
+		ie.Name = cl.name;
+}
+
+
