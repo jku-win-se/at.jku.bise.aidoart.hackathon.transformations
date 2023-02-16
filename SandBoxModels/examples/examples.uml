@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="20131001" xmlns:xmi="http://www.omg.org/spec/XMI/20131001" xmlns:uml="http://www.eclipse.org/uml2/5.0.0/UML" xmi:id="_V9L_UK3yEe2ZP6_xRve12g" name="examples">
+  <packageImport xmi:type="uml:PackageImport" xmi:id="_V-JooK3yEe2ZP6_xRve12g">
+    <importedPackage xmi:type="uml:Model" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#_0"/>
+  </packageImport>
+  <packagedElement xmi:type="uml:Class" xmi:id="_aO99kK3yEe2ZP6_xRve12g" name="A"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_bSWGIK3yEe2ZP6_xRve12g" name="B"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_gAt5wK3yEe2ZP6_xRve12g" name="Class4">
+    <ownedConnector xmi:type="uml:Connector" xmi:id="_mu0JcK3yEe2ZP6_xRve12g" name="Connector3">
+      <end xmi:type="uml:ConnectorEnd" xmi:id="_mu0Jca3yEe2ZP6_xRve12g" role="_iZiyUK3yEe2ZP6_xRve12g"/>
+      <end xmi:type="uml:ConnectorEnd" xmi:id="_mu0Jcq3yEe2ZP6_xRve12g" role="_ktlRgK3yEe2ZP6_xRve12g"/>
+    </ownedConnector>
+    <nestedClassifier xmi:type="uml:Class" xmi:id="_gtDbUK3yEe2ZP6_xRve12g" name="Class1">
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_iZiyUK3yEe2ZP6_xRve12g" name="Port1" aggregation="composite"/>
+    </nestedClassifier>
+    <nestedClassifier xmi:type="uml:Class" xmi:id="_hTWmUK3yEe2ZP6_xRve12g" name="Class2">
+      <ownedAttribute xmi:type="uml:Port" xmi:id="_ktlRgK3yEe2ZP6_xRve12g" name="Port1" aggregation="composite"/>
+    </nestedClassifier>
+  </packagedElement>
+</uml:Model>
