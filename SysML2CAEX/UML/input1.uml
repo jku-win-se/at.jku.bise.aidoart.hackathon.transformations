@@ -10,7 +10,7 @@
           <end xmi:id="_cNLFwK3pEe2TPPGk56W01Q" partWithPort="_UTX38K3pEe2TPPGk56W01Q"/>
         </ownedConnector>
         <ownedConnector xmi:id="_eYr9oLCzEe2S-oaJvrfhyg" name="connector2">
-          <end xmi:id="_mmGywLD6Ee2S-oaJvrfhyg" partWithPort="_XXl24K3pEe2TPPGk56W01Q"/>
+          <end xmi:id="_mmGywLD6Ee2S-oaJvrfhyg" partWithPort="_opYswLE0Ee2S-oaJvrfhyg"/>
           <end xmi:id="_mmGywbD6Ee2S-oaJvrfhyg" partWithPort="_KGtHMLEsEe2S-oaJvrfhyg"/>
         </ownedConnector>
       </packagedElement>
@@ -21,13 +21,15 @@
         </ownedAttribute>
         <ownedConnector xmi:id="_X4fJ8LEJEe2S-oaJvrfhyg" name="connector3">
           <end xmi:id="_X4fJ8bEJEe2S-oaJvrfhyg" partWithPort="_XXl24K3pEe2TPPGk56W01Q"/>
-          <end xmi:id="_X4fJ8rEJEe2S-oaJvrfhyg" partWithPort="_UTX38K3pEe2TPPGk56W01Q"/>
+          <end xmi:id="_X4fJ8rEJEe2S-oaJvrfhyg" partWithPort="_KGtHMLEsEe2S-oaJvrfhyg"/>
         </ownedConnector>
       </packagedElement>
       <packagedElement xmi:type="uml:Class" xmi:id="_Ih81U6uZEe2-x4Jox-pPqg" name="BodyAttachment">
         <ownedAttribute xmi:type="uml:Port" xmi:id="_KGtHMLEsEe2S-oaJvrfhyg" name="p3"/>
       </packagedElement>
-      <packagedElement xmi:type="uml:Class" xmi:id="_Ih81VKuZEe2-x4Jox-pPqg" name="DumperBody"/>
+      <packagedElement xmi:type="uml:Class" xmi:id="_Ih81VKuZEe2-x4Jox-pPqg" name="DumperBody">
+        <ownedAttribute xmi:type="uml:Port" xmi:id="_opYswLE0Ee2S-oaJvrfhyg" name="p4"/>
+      </packagedElement>
       <packagedElement xmi:type="uml:Class" xmi:id="_Ih81VauZEe2-x4Jox-pPqg" name="BodySideExtension"/>
       <packagedElement xmi:type="uml:Class" xmi:id="_Ih81VquZEe2-x4Jox-pPqg" name="TailLight"/>
     </packagedElement>

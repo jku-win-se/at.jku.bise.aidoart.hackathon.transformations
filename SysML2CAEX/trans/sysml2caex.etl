@@ -27,6 +27,7 @@ post{
 	var connectors = UML!Connector;
 	iH.bindExternalInterface(connectors);	
 	caexFile.instanceHierarchy.add(iH);
+	("The transformation is done successfully!").println();
 }
 
 rule SysML2CAEX

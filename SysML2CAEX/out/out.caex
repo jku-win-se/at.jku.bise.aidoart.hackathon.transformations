@@ -5,17 +5,19 @@
     <internalElement name="Spillguard">
       <externalInterface xsi:type="caex:ExternalInterface" name="p0"/>
       <internalLink name="connector1" partnerSideA="//@instanceHierarchy.0/@internalElement.1/@externalInterface.0" partnerSideB="//@instanceHierarchy.0/@internalElement.2/@externalInterface.0"/>
-      <internalLink name="connector2" partnerSideA="//@instanceHierarchy.0/@internalElement.1/@externalInterface.0" partnerSideB="//@instanceHierarchy.0/@internalElement.3/@externalInterface.0"/>
+      <internalLink name="connector2" partnerSideA="//@instanceHierarchy.0/@internalElement.4/@externalInterface.0" partnerSideB="//@instanceHierarchy.0/@internalElement.3/@externalInterface.0"/>
     </internalElement>
     <internalElement name="Tailgate">
       <attribute name="id" attributeDataType="EInt"/>
       <externalInterface xsi:type="caex:ExternalInterface" name="p1"/>
-      <internalLink name="connector3" partnerSideA="//@instanceHierarchy.0/@internalElement.1/@externalInterface.0" partnerSideB="//@instanceHierarchy.0/@internalElement.2/@externalInterface.0"/>
+      <internalLink name="connector3" partnerSideA="//@instanceHierarchy.0/@internalElement.1/@externalInterface.0" partnerSideB="//@instanceHierarchy.0/@internalElement.3/@externalInterface.0"/>
     </internalElement>
     <internalElement name="BodyAttachment">
       <externalInterface xsi:type="caex:ExternalInterface" name="p3"/>
     </internalElement>
-    <internalElement name="DumperBody"/>
+    <internalElement name="DumperBody">
+      <externalInterface xsi:type="caex:ExternalInterface" name="p4"/>
+    </internalElement>
     <internalElement name="BodySideExtension"/>
     <internalElement name="TailLight"/>
   </instanceHierarchy>
