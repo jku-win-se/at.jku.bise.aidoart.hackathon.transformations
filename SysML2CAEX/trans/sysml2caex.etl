@@ -24,7 +24,8 @@ pre {
 }
 
 post{
-	iH.addExternalInterface();	
+	var connectors = UML!Connector;
+	iH.bindExternalInterface(connectors);	
 	caexFile.instanceHierarchy.add(iH);
 }
 
@@ -66,7 +67,7 @@ rule connector2InternalLink
 }
 
 
-operation Any addExternalInterface() {
+operation Any bindExternalInterface(connectors:Any) {
 	var internalLinks = self.internalElement.internalLink;
 	var temp_ils= new Sequence;
 	for(il in internalLinks){
@@ -74,7 +75,6 @@ operation Any addExternalInterface() {
 				temp_ils.addAll(il);
 				}
 		}	
-	var connectors = UML!Connector;
 	for(c in connectors){
 		var internalLink= temp_ils.selectOne(iterator : InternalLink | iterator.name=c.name);
 		internalLink.partnerSideA= externalInterfaces.selectOne(iterator  | iterator.name=c.end.first().partWithPort.name);
