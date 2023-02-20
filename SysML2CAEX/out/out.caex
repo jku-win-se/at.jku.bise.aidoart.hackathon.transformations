@@ -1,2 +1,22 @@
 <?xml version="1.0" encoding="ASCII"?>
-<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI"/>
+<caex:CAEXFile xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:caex="http://www.dke.de/CAEX/300" fileName="caex_model">
+  <instanceHierarchy name="instance_hierarchy">
+    <internalElement name="Wearplate"/>
+    <internalElement name="Spillguard">
+      <externalInterface xsi:type="caex:ExternalInterface" name="p0"/>
+      <internalLink name="connector1" partnerSideA="//@instanceHierarchy.0/@internalElement.1/@externalInterface.0" partnerSideB="//@instanceHierarchy.0/@internalElement.2/@externalInterface.0"/>
+      <internalLink name="connector2" partnerSideA="//@instanceHierarchy.0/@internalElement.1/@externalInterface.0" partnerSideB="//@instanceHierarchy.0/@internalElement.3/@externalInterface.0"/>
+    </internalElement>
+    <internalElement name="Tailgate">
+      <attribute name="id" attributeDataType="EInt"/>
+      <externalInterface xsi:type="caex:ExternalInterface" name="p1"/>
+      <internalLink name="connector3" partnerSideA="//@instanceHierarchy.0/@internalElement.1/@externalInterface.0" partnerSideB="//@instanceHierarchy.0/@internalElement.2/@externalInterface.0"/>
+    </internalElement>
+    <internalElement name="BodyAttachment">
+      <externalInterface xsi:type="caex:ExternalInterface" name="p3"/>
+    </internalElement>
+    <internalElement name="DumperBody"/>
+    <internalElement name="BodySideExtension"/>
+    <internalElement name="TailLight"/>
+  </instanceHierarchy>
+</caex:CAEXFile>
