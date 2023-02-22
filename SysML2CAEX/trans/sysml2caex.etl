@@ -1,25 +1,20 @@
 pre {
 	"Running ETL".println();
-	var caexFile = new CAEX30!CAEXFile;
-	caexFile.fileName="caex_model";
+	var caexFile;
 	var iH= new CAEX30!InstanceHierarchy;
 	iH.name= "instance_hierarchy";
 	var umlTool : new Native("org.eclipse.epsilon.emc.uml.dt.UMLTool");
 	var sysmlProfile = umlTool.getProfile("http://www.eclipse.org/papyrus/sysml/1.6/SysML/Blocks");
+	var ecoreProfile = umlTool.getProfileFromPathmapUri("pathmap://UML_PROFILES/Ecore.profile.uml");
 	
-	var activitiesProfile = sysmlProfile.getPackagedElement("Activities");
-	var allocationsProfile = sysmlProfile.getPackagedElement("Allocations");
 	var blocksProfile = sysmlProfile.getPackagedElement("Blocks");
-	var constraintBlocksProfile = sysmlProfile.getPackagedElement("ConstraintBlocks");
-	var deprecatedElementsProfile = sysmlProfile.getPackagedElement("DeprecatedElements");
-	var modelElementsProfile = sysmlProfile.getPackagedElement("ModelElements");
-	var portsAndFlowsProfile = sysmlProfile.getPackagedElement("PortsAndFlows");
-	var requirementsProfile = sysmlProfile.getPackagedElement("Requirements");
-
-//	var amlProfile = AML!Profile.all.first();
-	
 	var blockStereotype = blocksProfile.getPackagedElement("Block");
-//	var sucStereotype = amlProfile.getPackagedElement("SUC");
+
+	var amlProfile = AML!Profile.all.first();
+	
+	var sucStereotype = amlProfile.getPackagedElement("SUC");
+	var icStereotype = amlProfile.getPackagedElement("IC");
+	var ieStereotype = amlProfile.getPackagedElement("IE");
 	var externalInterfaces = new Sequence; //a list containing the externalInterfaces for postprocessing purposes
 }
 
@@ -30,10 +25,20 @@ post{
 	("The transformation is done successfully!").println();
 }
 
+
+rule Model2CAEXFile 
+	transform m : UML!Model
+	to c : CAEX30!CAEXFile {
+		guard : m.name!="Ecore"
+		c.fileName = m.name;
+		caexFile = c;
+}
+
+
 rule SysML2CAEX
 	transform s : UML!Class 
 	to  ie: CAEX30!InternalElement{
-		guard : s.hasStereotypes(blockStereotype)
+		guard : s.hasStereotypes(blockStereotype) and s.hasStereotypes(sucStereotype)
 		ie.name= s.name;
 		iH.internalElement.add(ie);
 		
@@ -85,10 +90,10 @@ operation Any bindExternalInterface(connectors:Any) {
 
 
 operation Any hasStereotypes(r : Any) {
-	if (self.getAppliedStereotypes().size()>0){
-		if (self.getAppliedStereotypes().first().name = r.name)
-			return true;
-		else return false;
-	}
-	return true;
+	var temp = self.getAppliedStereotypes();
+	if (temp.size()>0)
+		for (st in temp)
+			if (st.name = r.name)
+				return true;
+	return false;
 }

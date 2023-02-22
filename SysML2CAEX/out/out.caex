@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="ASCII"?>
-<caex:CAEXFile xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:caex="http://www.dke.de/CAEX/300" fileName="caex_model">
+<caex:CAEXFile xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:caex="http://www.dke.de/CAEX/300" fileName="AIDOaRt_Hackaton_ART-NG">
   <instanceHierarchy name="instance_hierarchy">
     <internalElement name="Wearplate"/>
     <internalElement name="Spillguard">
