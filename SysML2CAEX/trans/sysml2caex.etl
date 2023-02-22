@@ -1,8 +1,11 @@
 pre {
 	"Running ETL".println();
-	var caexFile;
+	var caexFile; //general var for postprocessing 
 	var iH= new CAEX30!InstanceHierarchy;
-	iH.name= "instance_hierarchy";
+	var SUCLib= new CAEX30!SystemUnitClassLib;
+	var ICLib= new CAEX30!InterfaceClassLib;
+	
+	
 	var umlTool : new Native("org.eclipse.epsilon.emc.uml.dt.UMLTool");
 	var sysmlProfile = umlTool.getProfile("http://www.eclipse.org/papyrus/sysml/1.6/SysML/Blocks");
 	var ecoreProfile = umlTool.getProfileFromPathmapUri("pathmap://UML_PROFILES/Ecore.profile.uml");
@@ -19,8 +22,11 @@ pre {
 }
 
 post{
+		
 	var connectors = UML!Connector;
-	iH.bindExternalInterface(connectors);	
+	iH.bindExternalInterface(connectors);
+	caexFile.interfaceClassLib.add(ICLib);
+	caexFile.systemUnitClassLib.add(SUCLib);
 	caexFile.instanceHierarchy.add(iH);
 	("The transformation is done successfully!").println();
 }
@@ -35,7 +41,7 @@ rule Model2CAEXFile
 }
 
 
-rule SysML2CAEX
+rule class2internalElement
 	transform s : UML!Class 
 	to  ie: CAEX30!InternalElement{
 		guard : s.hasStereotypes(blockStereotype) and s.hasStereotypes(sucStereotype)
@@ -56,6 +62,26 @@ rule SysML2CAEX
 			ie.internalLink ::= s.ownedConnector;
 }	
 
+rule class2systemUnitClass
+	transform s : UML!Class 
+	to  suc: CAEX30!SystemUnitClass{
+		guard : s.hasStereotypes(blockStereotype) and s.hasStereotypes(sucStereotype)
+		suc.name= s.name;
+		SUCLib.systemUnitClass.add(suc);
+		
+		for(prp in s.ownedAttribute){
+			if (prp.EClass.name="Property"){
+				var attr= new CAEX30!Attribute;
+				attr.name = prp.name;
+				attr.attributeDataType= prp.type.name;
+				suc.attribute.add(attr);
+			}
+		}
+		if (s.ownedAttribute.isDefined())
+				suc.externalInterface ::= s.ownedPort;
+//		if (s.ownedConnector.isDefined())
+//			suc.internalLink ::= s.ownedConnector;
+}	
 
 rule port2externalElement 
 	transform s : UML!Port
@@ -82,6 +108,7 @@ operation Any bindExternalInterface(connectors:Any) {
 				}
 		}	
 	for(c in connectors){
+		("connectors.size:: "+connectors.size()).println();
 		var internalLink= temp_ils.selectOne(iterator : InternalLink | iterator.name=c.name);
 		internalLink.partnerSideA= externalInterfaces.selectOne(iterator  | iterator.name=c.end.first().partWithPort.name);
 		internalLink.partnerSideB= externalInterfaces.selectOne(iterator  | iterator.name=c.end.second().partWithPort.name);
