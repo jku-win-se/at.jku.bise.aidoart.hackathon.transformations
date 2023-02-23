@@ -12,10 +12,13 @@
     </internalElement>
     <internalElement name="BodyAttachment"/>
     <internalElement name="DumperBody"/>
-    <internalElement name="BodySideExtension"/>
-    <internalElement name="TailLight"/>
   </instanceHierarchy>
-  <interfaceClassLib/>
+  <interfaceClassLib>
+    <interfaceClass name="BodySideExtension"/>
+  </interfaceClassLib>
+  <roleClassLib>
+    <roleClass name="TailLight"/>
+  </roleClassLib>
   <systemUnitClassLib>
     <systemUnitClass name="Wearplate"/>
     <systemUnitClass name="Spillguard">
@@ -31,7 +34,5 @@
     <systemUnitClass name="DumperBody">
       <externalInterface xsi:type="caex:ExternalInterface" name="p4"/>
     </systemUnitClass>
-    <systemUnitClass name="BodySideExtension"/>
-    <systemUnitClass name="TailLight"/>
   </systemUnitClassLib>
 </caex:CAEXFile>

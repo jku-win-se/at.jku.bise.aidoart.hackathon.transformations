@@ -4,7 +4,7 @@ pre {
 	var iH= new CAEX30!InstanceHierarchy;
 	var SUCLib= new CAEX30!SystemUnitClassLib;
 	var ICLib= new CAEX30!InterfaceClassLib;
-	
+	var RCLib= new CAEX30!RoleClassLib;
 	
 	var umlTool : new Native("org.eclipse.epsilon.emc.uml.dt.UMLTool");
 	var sysmlProfile = umlTool.getProfile("http://www.eclipse.org/papyrus/sysml/1.6/SysML/Blocks");
@@ -18,14 +18,15 @@ pre {
 	var sucStereotype = amlProfile.getPackagedElement("SUC");
 	var icStereotype = amlProfile.getPackagedElement("IC");
 	var ieStereotype = amlProfile.getPackagedElement("IE");
+	var rcStereotype = amlProfile.getPackagedElement("RC");
 	var externalInterfaces = new Sequence; //a list containing the externalInterfaces for postprocessing purposes
 }
 
 post{
-		
 	var connectors = UML!Connector;
-	iH.bindExternalInterface(connectors);
+	bindExternalInterface(connectors, iH.internalElement.internalLink);
 	caexFile.interfaceClassLib.add(ICLib);
+	caexFile.roleClassLib.add(RCLib);
 	caexFile.systemUnitClassLib.add(SUCLib);
 	caexFile.instanceHierarchy.add(iH);
 	("The transformation is done successfully!").println();
@@ -44,7 +45,7 @@ rule Model2CAEXFile
 rule class2internalElement
 	transform s : UML!Class 
 	to  ie: CAEX30!InternalElement{
-		guard : s.hasStereotypes(blockStereotype) and s.hasStereotypes(sucStereotype)
+		guard : (s.hasStereotypes(blockStereotype) and s.hasStereotypes(sucStereotype))
 		ie.name= s.name;
 		iH.internalElement.add(ie);
 		
@@ -57,10 +58,25 @@ rule class2internalElement
 			}
 		}
 		if (s.ownedAttribute.isDefined())
-				ie.externalInterface ::= s.ownedPort;
+			ie.externalInterface ::= s.ownedPort;
 		if (s.ownedConnector.isDefined())
 			ie.internalLink ::= s.ownedConnector;
 }	
+
+rule port2externalElement 
+	transform s : UML!Port
+	to t : CAEX30!ExternalInterface {
+	guard : s.EClass.name="Port"
+	t.name=s.name;
+	externalInterfaces.add(t); //adding the externalInterface for postprocessing purposes
+}
+
+
+rule connector2InternalLink 
+	transform s : UML!Connector
+	to t : CAEX30!InternalLink {
+	t.name=s.name;
+}
 
 rule class2systemUnitClass
 	transform s : UML!Class 
@@ -79,36 +95,51 @@ rule class2systemUnitClass
 		}
 		if (s.ownedAttribute.isDefined())
 				suc.externalInterface ::= s.ownedPort;
-//		if (s.ownedConnector.isDefined())
-//			suc.internalLink ::= s.ownedConnector;
+
 }	
 
-rule port2externalElement 
-	transform s : UML!Port
-	to t : CAEX30!ExternalInterface {
-	guard : s.EClass.name="Port"
-	t.name=s.name;
-	externalInterfaces.add(t); //adding the externalInterface for postprocessing purposes
+rule class2interfaceClass
+	transform s : UML!Class 
+	to  ic: CAEX30!InterfaceClass{
+		guard : s.hasStereotypes(blockStereotype) and s.hasStereotypes(icStereotype)
+		ic.name= s.name;
+		ICLib.interfaceClass.add(ic);
+		
+		for(prp in s.ownedAttribute){
+			if (prp.EClass.name="Property"){
+				var attr= new CAEX30!Attribute;
+				attr.name = prp.name;
+				attr.attributeDataType= prp.type.name;
+				ic.attribute.add(attr);
+			}
+		}
+}	
+
+rule class2roleClass
+	transform s : UML!Class 
+	to  rc: CAEX30!RoleClass{
+		guard : s.hasStereotypes(blockStereotype) and s.hasStereotypes(rcStereotype)
+		rc.name= s.name;
+		RCLib.roleClass.add(rc);
+		
+		for(prp in s.ownedAttribute){
+			if (prp.EClass.name="Property"){
+				var attr= new CAEX30!Attribute;
+				attr.name = prp.name;
+				attr.attributeDataType= prp.type.name;
+				rc.attribute.add(attr);
+			}
+		}
 }
 
 
-rule connector2InternalLink 
-	transform s : UML!Connector
-	to t : CAEX30!InternalLink {
-	t.name=s.name;
-}
-
-
-operation Any bindExternalInterface(connectors:Any) {
-	var internalLinks = self.internalElement.internalLink;
+operation bindExternalInterface(connectors, internalLinks:Any) {
 	var temp_ils= new Sequence;
-	for(il in internalLinks){
-			if(il.size()>0){
+	for(il in internalLinks)
+			if(il.size()>0)
 				temp_ils.addAll(il);
-				}
-		}	
+			
 	for(c in connectors){
-		("connectors.size:: "+connectors.size()).println();
 		var internalLink= temp_ils.selectOne(iterator : InternalLink | iterator.name=c.name);
 		internalLink.partnerSideA= externalInterfaces.selectOne(iterator  | iterator.name=c.end.first().partWithPort.name);
 		internalLink.partnerSideB= externalInterfaces.selectOne(iterator  | iterator.name=c.end.second().partWithPort.name);
