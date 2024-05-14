@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<uml:Model xmi:version="2.1" xmlns:xmi="http://schema.omg.org/spec/XMI/2.1" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore" xmlns:uml="http://www.eclipse.org/uml2/3.0.0/UML" xmi:id="_jfzP8DjnEe2tpsXn1xNlXA" name="vce energy">
+  <eAnnotations xmi:id="_jfzP8TjnEe2tpsXn1xNlXA" source="Objing">
+    <contents xmi:type="uml:Property" xmi:id="_jfzP8jjnEe2tpsXn1xNlXA" name="exporterVersion">
+      <defaultValue xmi:type="uml:LiteralString" xmi:id="_jfzP8zjnEe2tpsXn1xNlXA" value="3.0.0"/>
+    </contents>
+  </eAnnotations>
+  <ownedRule xmi:id="_jfzP9DjnEe2tpsXn1xNlXA" name="Cooling needed" constrainedElement="_jfzQ6zjnEe2tpsXn1xNlXA">
+    <specification xmi:type="uml:LiteralString" xmi:id="_jfzP9TjnEe2tpsXn1xNlXA" value=""/>
+  </ownedRule>
+  <ownedRule xmi:id="_jfzP9jjnEe2tpsXn1xNlXA" name="Yes" constrainedElement="_jfzQ9DjnEe2tpsXn1xNlXA">
+    <specification xmi:type="uml:LiteralString" xmi:id="_jfzP9zjnEe2tpsXn1xNlXA" value=""/>
+  </ownedRule>
+  <ownedRule xmi:id="_jfzP-DjnEe2tpsXn1xNlXA" name="No" constrainedElement="_jfzQ9zjnEe2tpsXn1xNlXA">
+    <specification xmi:type="uml:LiteralString" xmi:id="_jfzP-TjnEe2tpsXn1xNlXA" value=""/>
+  </ownedRule>
+  <packagedElement xmi:type="uml:Class" xmi:id="_jfzP-jjnEe2tpsXn1xNlXA" name="Thermal management system">
+    <ownedAttribute xmi:id="_jfzP-zjnEe2tpsXn1xNlXA" name="fan" visibility="public" type="_jfzQmzjnEe2tpsXn1xNlXA" isUnique="false" aggregation="composite" association="_jfzQgzjnEe2tpsXn1xNlXA">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jfzP_DjnEe2tpsXn1xNlXA"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_jfzP_TjnEe2tpsXn1xNlXA" name="radiator" visibility="public" type="_jfzQnDjnEe2tpsXn1xNlXA" isUnique="false" aggregation="composite" association="_jfzQhTjnEe2tpsXn1xNlXA">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jfzP_jjnEe2tpsXn1xNlXA"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_jfzP_zjnEe2tpsXn1xNlXA" name="valve" visibility="public" type="_jfzQnTjnEe2tpsXn1xNlXA" isUnique="false" aggregation="composite" association="_jfzQhzjnEe2tpsXn1xNlXA">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jfzQADjnEe2tpsXn1xNlXA"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_jfzQATjnEe2tpsXn1xNlXA" name="pump" visibility="public" type="_jfzQnjjnEe2tpsXn1xNlXA" isUnique="false" aggregation="composite" association="_jfzQiTjnEe2tpsXn1xNlXA">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jfzQAjjnEe2tpsXn1xNlXA"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_jfzQAzjnEe2tpsXn1xNlXA" name="electric motor" visibility="public" type="_jfzQnzjnEe2tpsXn1xNlXA" isUnique="false" aggregation="composite" association="_jfzQizjnEe2tpsXn1xNlXA">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jfzQBDjnEe2tpsXn1xNlXA"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_jfzQBTjnEe2tpsXn1xNlXA" name="coolant heater" visibility="public" type="_jfzQoDjnEe2tpsXn1xNlXA" isUnique="false" aggregation="composite" association="_jfzQjTjnEe2tpsXn1xNlXA">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jfzQBjjnEe2tpsXn1xNlXA"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_jfzQBzjnEe2tpsXn1xNlXA" name="battery" visibility="public" type="_jfzQoTjnEe2tpsXn1xNlXA" isUnique="false" aggregation="composite" association="_jfzQjzjnEe2tpsXn1xNlXA">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jfzQCDjnEe2tpsXn1xNlXA"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_jfzQCTjnEe2tpsXn1xNlXA" name="charger" visibility="public" type="_jfzQozjnEe2tpsXn1xNlXA" isUnique="false" aggregation="composite" association="_jfzQkTjnEe2tpsXn1xNlXA">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jfzQCjjnEe2tpsXn1xNlXA"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_jfzQCzjnEe2tpsXn1xNlXA" name="dC/DC" visibility="public" type="_jfzQojjnEe2tpsXn1xNlXA" isUnique="false" aggregation="composite" association="_jfzQkzjnEe2tpsXn1xNlXA">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jfzQDDjnEe2tpsXn1xNlXA"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_jfzQDTjnEe2tpsXn1xNlXA" name="electric motor drive" visibility="public" type="_jfzQpDjnEe2tpsXn1xNlXA" isUnique="false" aggregation="composite" association="_jfzQlTjnEe2tpsXn1xNlXA">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jfzQDjjnEe2tpsXn1xNlXA"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_jfzQDzjnEe2tpsXn1xNlXA" name="sensor" visibility="public" type="_jfzQtTjnEe2tpsXn1xNlXA" isUnique="false" aggregation="composite" association="_jfzQlzjnEe2tpsXn1xNlXA">
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jfzQEDjnEe2tpsXn1xNlXA" value="2"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jfzQETjnEe2tpsXn1xNlXA" value="2"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_jfzQEjjnEe2tpsXn1xNlXA" name="block" visibility="public" type="_jfzQtjjnEe2tpsXn1xNlXA" isUnique="false" aggregation="composite" association="_jfzQmTjnEe2tpsXn1xNlXA">
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jfzQEzjnEe2tpsXn1xNlXA"/>
+    </ownedAttribute>
+    <ownedAttribute xmi:id="_jfzQFDjnEe2tpsXn1xNlXA" type="_jfzQmzjnEe2tpsXn1xNlXA" aggregation="composite"/>
+    <ownedAttribute xmi:id="_jfzQFTjnEe2tpsXn1xNlXA" type="_jfzQnDjnEe2tpsXn1xNlXA" aggregation="composite"/>
+    <ownedAttribute xmi:id="_jfzQFjjnEe2tpsXn1xNlXA" type="_jfzQnTjnEe2tpsXn1xNlXA" aggregation="composite"/>
+    <ownedAttribute xmi:id="_jfzQFzjnEe2tpsXn1xNlXA" type="_jfzQnjjnEe2tpsXn1xNlXA" aggregation="composite"/>
+    <ownedAttribute xmi:id="_jfzQGDjnEe2tpsXn1xNlXA" type="_jfzQnzjnEe2tpsXn1xNlXA" aggregation="composite"/>
+    <ownedAttribute xmi:id="_jfzQGTjnEe2tpsXn1xNlXA" type="_jfzQoDjnEe2tpsXn1xNlXA" aggregation="composite"/>
+    <ownedAttribute xmi:id="_jfzQGjjnEe2tpsXn1xNlXA" type="_jfzQoTjnEe2tpsXn1xNlXA" aggregation="composite"/>
+    <ownedAttribute xmi:id="_jfzQGzjnEe2tpsXn1xNlXA" type="_jfzQojjnEe2tpsXn1xNlXA" aggregation="composite"/>
+    <ownedAttribute xmi:id="_jfzQHDjnEe2tpsXn1xNlXA" type="_jfzQozjnEe2tpsXn1xNlXA" aggregation="composite"/>
+    <ownedAttribute xmi:id="_jfzQHTjnEe2tpsXn1xNlXA" type="_jfzQpDjnEe2tpsXn1xNlXA" aggregation="composite"/>
+    <ownedAttribute xmi:id="_jfzQHjjnEe2tpsXn1xNlXA" name="S2" type="_jfzQtTjnEe2tpsXn1xNlXA" aggregation="composite"/>
+    <ownedAttribute xmi:id="_jfzQHzjnEe2tpsXn1xNlXA" name="S1" type="_jfzQtTjnEe2tpsXn1xNlXA" aggregation="composite"/>
+    <ownedAttribute xmi:id="_jfzQIDjnEe2tpsXn1xNlXA" type="_jfzQtjjnEe2tpsXn1xNlXA" aggregation="composite"/>
+    <ownedConnector xmi:id="_jfzQITjnEe2tpsXn1xNlXA">
+      <end xmi:id="_jfzQIjjnEe2tpsXn1xNlXA" isUnique="false" partWithPort="_jfzQFTjnEe2tpsXn1xNlXA">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jfzQIzjnEe2tpsXn1xNlXA" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jfzQJDjnEe2tpsXn1xNlXA"/>
+      </end>
+      <end xmi:id="_jfzQJTjnEe2tpsXn1xNlXA" isUnique="false">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jfzQJjjnEe2tpsXn1xNlXA" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jfzQJzjnEe2tpsXn1xNlXA"/>
+      </end>
+    </ownedConnector>
+    <ownedConnector xmi:id="_jfzQKDjnEe2tpsXn1xNlXA">
+      <end xmi:id="_jfzQKTjnEe2tpsXn1xNlXA" isUnique="false" partWithPort="_jfzQFjjnEe2tpsXn1xNlXA">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jfzQKjjnEe2tpsXn1xNlXA" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jfzQKzjnEe2tpsXn1xNlXA"/>
+      </end>
+      <end xmi:id="_jfzQLDjnEe2tpsXn1xNlXA" isUnique="false">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jfzQLTjnEe2tpsXn1xNlXA" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jfzQLjjnEe2tpsXn1xNlXA"/>
+      </end>
+    </ownedConnector>
+    <ownedConnector xmi:id="_jfzQLzjnEe2tpsXn1xNlXA">
+      <end xmi:id="_jfzQMDjnEe2tpsXn1xNlXA" isUnique="false" partWithPort="_jfzQFjjnEe2tpsXn1xNlXA">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jfzQMTjnEe2tpsXn1xNlXA" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jfzQMjjnEe2tpsXn1xNlXA"/>
+      </end>
+      <end xmi:id="_jfzQMzjnEe2tpsXn1xNlXA" isUnique="false">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jfzQNDjnEe2tpsXn1xNlXA" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jfzQNTjnEe2tpsXn1xNlXA"/>
+      </end>
+    </ownedConnector>
+    <ownedConnector xmi:id="_jfzQNjjnEe2tpsXn1xNlXA">
+      <end xmi:id="_jfzQNzjnEe2tpsXn1xNlXA" isUnique="false" partWithPort="_jfzQFzjnEe2tpsXn1xNlXA">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jfzQODjnEe2tpsXn1xNlXA" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jfzQOTjnEe2tpsXn1xNlXA"/>
+      </end>
+      <end xmi:id="_jfzQOjjnEe2tpsXn1xNlXA" isUnique="false">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jfzQOzjnEe2tpsXn1xNlXA" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jfzQPDjnEe2tpsXn1xNlXA"/>
+      </end>
+    </ownedConnector>
+    <ownedConnector xmi:id="_jfzQPTjnEe2tpsXn1xNlXA">
+      <end xmi:id="_jfzQPjjnEe2tpsXn1xNlXA" isUnique="false" partWithPort="_jfzQFzjnEe2tpsXn1xNlXA">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jfzQPzjnEe2tpsXn1xNlXA" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jfzQQDjnEe2tpsXn1xNlXA"/>
+      </end>
+      <end xmi:id="_jfzQQTjnEe2tpsXn1xNlXA" isUnique="false">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jfzQQjjnEe2tpsXn1xNlXA" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jfzQQzjnEe2tpsXn1xNlXA"/>
+      </end>
+    </ownedConnector>
+    <ownedConnector xmi:id="_jfzQRDjnEe2tpsXn1xNlXA">
+      <end xmi:id="_jfzQRTjnEe2tpsXn1xNlXA" isUnique="false" partWithPort="_jfzQGDjnEe2tpsXn1xNlXA">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jfzQRjjnEe2tpsXn1xNlXA" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jfzQRzjnEe2tpsXn1xNlXA"/>
+      </end>
+      <end xmi:id="_jfzQSDjnEe2tpsXn1xNlXA" isUnique="false">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jfzQSTjnEe2tpsXn1xNlXA" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jfzQSjjnEe2tpsXn1xNlXA"/>
+      </end>
+    </ownedConnector>
+    <ownedConnector xmi:id="_jfzQSzjnEe2tpsXn1xNlXA">
+      <end xmi:id="_jfzQTDjnEe2tpsXn1xNlXA" isUnique="false" partWithPort="_jfzQGTjnEe2tpsXn1xNlXA">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jfzQTTjnEe2tpsXn1xNlXA" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jfzQTjjnEe2tpsXn1xNlXA"/>
+      </end>
+      <end xmi:id="_jfzQTzjnEe2tpsXn1xNlXA" isUnique="false">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jfzQUDjnEe2tpsXn1xNlXA" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jfzQUTjnEe2tpsXn1xNlXA"/>
+      </end>
+    </ownedConnector>
+    <ownedConnector xmi:id="_jfzQUjjnEe2tpsXn1xNlXA">
+      <end xmi:id="_jfzQUzjnEe2tpsXn1xNlXA" isUnique="false" partWithPort="_jfzQGjjnEe2tpsXn1xNlXA">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jfzQVDjnEe2tpsXn1xNlXA" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jfzQVTjnEe2tpsXn1xNlXA"/>
+      </end>
+      <end xmi:id="_jfzQVjjnEe2tpsXn1xNlXA" isUnique="false">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jfzQVzjnEe2tpsXn1xNlXA" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jfzQWDjnEe2tpsXn1xNlXA"/>
+      </end>
+    </ownedConnector>
+    <ownedConnector xmi:id="_jfzQWTjnEe2tpsXn1xNlXA">
+      <end xmi:id="_jfzQWjjnEe2tpsXn1xNlXA" isUnique="false" partWithPort="_jfzQGjjnEe2tpsXn1xNlXA">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jfzQWzjnEe2tpsXn1xNlXA" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jfzQXDjnEe2tpsXn1xNlXA"/>
+      </end>
+      <end xmi:id="_jfzQXTjnEe2tpsXn1xNlXA" isUnique="false">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jfzQXjjnEe2tpsXn1xNlXA" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jfzQXzjnEe2tpsXn1xNlXA"/>
+      </end>
+    </ownedConnector>
+    <ownedConnector xmi:id="_jfzQYDjnEe2tpsXn1xNlXA">
+      <end xmi:id="_jfzQYTjnEe2tpsXn1xNlXA" isUnique="false" partWithPort="_jfzQGzjnEe2tpsXn1xNlXA">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jfzQYjjnEe2tpsXn1xNlXA" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jfzQYzjnEe2tpsXn1xNlXA"/>
+      </end>
+      <end xmi:id="_jfzQZDjnEe2tpsXn1xNlXA" isUnique="false">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jfzQZTjnEe2tpsXn1xNlXA" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jfzQZjjnEe2tpsXn1xNlXA"/>
+      </end>
+    </ownedConnector>
+    <ownedConnector xmi:id="_jfzQZzjnEe2tpsXn1xNlXA">
+      <end xmi:id="_jfzQaDjnEe2tpsXn1xNlXA" isUnique="false" partWithPort="_jfzQHDjnEe2tpsXn1xNlXA">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jfzQaTjnEe2tpsXn1xNlXA" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jfzQajjnEe2tpsXn1xNlXA"/>
+      </end>
+      <end xmi:id="_jfzQazjnEe2tpsXn1xNlXA" isUnique="false">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jfzQbDjnEe2tpsXn1xNlXA" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jfzQbTjnEe2tpsXn1xNlXA"/>
+      </end>
+    </ownedConnector>
+    <ownedConnector xmi:id="_jfzQbjjnEe2tpsXn1xNlXA">
+      <end xmi:id="_jfzQbzjnEe2tpsXn1xNlXA" isUnique="false" partWithPort="_jfzQHTjnEe2tpsXn1xNlXA">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jfzQcDjnEe2tpsXn1xNlXA" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jfzQcTjnEe2tpsXn1xNlXA"/>
+      </end>
+      <end xmi:id="_jfzQcjjnEe2tpsXn1xNlXA" isUnique="false">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jfzQczjnEe2tpsXn1xNlXA" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jfzQdDjnEe2tpsXn1xNlXA"/>
+      </end>
+    </ownedConnector>
+    <ownedConnector xmi:id="_jfzQdTjnEe2tpsXn1xNlXA">
+      <end xmi:id="_jfzQdjjnEe2tpsXn1xNlXA" isUnique="false" partWithPort="_jfzQHjjnEe2tpsXn1xNlXA">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jfzQdzjnEe2tpsXn1xNlXA" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jfzQeDjnEe2tpsXn1xNlXA"/>
+      </end>
+      <end xmi:id="_jfzQeTjnEe2tpsXn1xNlXA" isUnique="false">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jfzQejjnEe2tpsXn1xNlXA" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jfzQezjnEe2tpsXn1xNlXA"/>
+      </end>
+    </ownedConnector>
+    <ownedConnector xmi:id="_jfzQfDjnEe2tpsXn1xNlXA">
+      <end xmi:id="_jfzQfTjnEe2tpsXn1xNlXA" isUnique="false" partWithPort="_jfzQHzjnEe2tpsXn1xNlXA">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jfzQfjjnEe2tpsXn1xNlXA" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jfzQfzjnEe2tpsXn1xNlXA"/>
+      </end>
+      <end xmi:id="_jfzQgDjnEe2tpsXn1xNlXA" isUnique="false">
+        <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jfzQgTjnEe2tpsXn1xNlXA" value="1"/>
+        <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jfzQgjjnEe2tpsXn1xNlXA"/>
+      </end>
+    </ownedConnector>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_jfzQgzjnEe2tpsXn1xNlXA" memberEnd="_jfzP-zjnEe2tpsXn1xNlXA _jfzQhDjnEe2tpsXn1xNlXA">
+    <ownedEnd xmi:id="_jfzQhDjnEe2tpsXn1xNlXA" visibility="public" type="_jfzP-jjnEe2tpsXn1xNlXA" isUnique="false" association="_jfzQgzjnEe2tpsXn1xNlXA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_jfzQhTjnEe2tpsXn1xNlXA" memberEnd="_jfzP_TjnEe2tpsXn1xNlXA _jfzQhjjnEe2tpsXn1xNlXA">
+    <ownedEnd xmi:id="_jfzQhjjnEe2tpsXn1xNlXA" visibility="public" type="_jfzP-jjnEe2tpsXn1xNlXA" isUnique="false" association="_jfzQhTjnEe2tpsXn1xNlXA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_jfzQhzjnEe2tpsXn1xNlXA" memberEnd="_jfzP_zjnEe2tpsXn1xNlXA _jfzQiDjnEe2tpsXn1xNlXA">
+    <ownedEnd xmi:id="_jfzQiDjnEe2tpsXn1xNlXA" visibility="public" type="_jfzP-jjnEe2tpsXn1xNlXA" isUnique="false" association="_jfzQhzjnEe2tpsXn1xNlXA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_jfzQiTjnEe2tpsXn1xNlXA" memberEnd="_jfzQATjnEe2tpsXn1xNlXA _jfzQijjnEe2tpsXn1xNlXA">
+    <ownedEnd xmi:id="_jfzQijjnEe2tpsXn1xNlXA" visibility="public" type="_jfzP-jjnEe2tpsXn1xNlXA" isUnique="false" association="_jfzQiTjnEe2tpsXn1xNlXA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_jfzQizjnEe2tpsXn1xNlXA" memberEnd="_jfzQAzjnEe2tpsXn1xNlXA _jfzQjDjnEe2tpsXn1xNlXA">
+    <ownedEnd xmi:id="_jfzQjDjnEe2tpsXn1xNlXA" visibility="public" type="_jfzP-jjnEe2tpsXn1xNlXA" isUnique="false" association="_jfzQizjnEe2tpsXn1xNlXA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_jfzQjTjnEe2tpsXn1xNlXA" memberEnd="_jfzQBTjnEe2tpsXn1xNlXA _jfzQjjjnEe2tpsXn1xNlXA">
+    <ownedEnd xmi:id="_jfzQjjjnEe2tpsXn1xNlXA" visibility="public" type="_jfzP-jjnEe2tpsXn1xNlXA" isUnique="false" association="_jfzQjTjnEe2tpsXn1xNlXA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_jfzQjzjnEe2tpsXn1xNlXA" memberEnd="_jfzQBzjnEe2tpsXn1xNlXA _jfzQkDjnEe2tpsXn1xNlXA">
+    <ownedEnd xmi:id="_jfzQkDjnEe2tpsXn1xNlXA" visibility="public" type="_jfzP-jjnEe2tpsXn1xNlXA" isUnique="false" association="_jfzQjzjnEe2tpsXn1xNlXA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_jfzQkTjnEe2tpsXn1xNlXA" memberEnd="_jfzQCTjnEe2tpsXn1xNlXA _jfzQkjjnEe2tpsXn1xNlXA">
+    <ownedEnd xmi:id="_jfzQkjjnEe2tpsXn1xNlXA" visibility="public" type="_jfzP-jjnEe2tpsXn1xNlXA" isUnique="false" association="_jfzQkTjnEe2tpsXn1xNlXA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_jfzQkzjnEe2tpsXn1xNlXA" memberEnd="_jfzQCzjnEe2tpsXn1xNlXA _jfzQlDjnEe2tpsXn1xNlXA">
+    <ownedEnd xmi:id="_jfzQlDjnEe2tpsXn1xNlXA" visibility="public" type="_jfzP-jjnEe2tpsXn1xNlXA" isUnique="false" association="_jfzQkzjnEe2tpsXn1xNlXA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_jfzQlTjnEe2tpsXn1xNlXA" memberEnd="_jfzQDTjnEe2tpsXn1xNlXA _jfzQljjnEe2tpsXn1xNlXA">
+    <ownedEnd xmi:id="_jfzQljjnEe2tpsXn1xNlXA" visibility="public" type="_jfzP-jjnEe2tpsXn1xNlXA" isUnique="false" association="_jfzQlTjnEe2tpsXn1xNlXA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_jfzQlzjnEe2tpsXn1xNlXA" memberEnd="_jfzQDzjnEe2tpsXn1xNlXA _jfzQmDjnEe2tpsXn1xNlXA">
+    <ownedEnd xmi:id="_jfzQmDjnEe2tpsXn1xNlXA" visibility="public" type="_jfzP-jjnEe2tpsXn1xNlXA" isUnique="false" association="_jfzQlzjnEe2tpsXn1xNlXA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Association" xmi:id="_jfzQmTjnEe2tpsXn1xNlXA" memberEnd="_jfzQEjjnEe2tpsXn1xNlXA _jfzQmjjnEe2tpsXn1xNlXA">
+    <ownedEnd xmi:id="_jfzQmjjnEe2tpsXn1xNlXA" visibility="public" type="_jfzP-jjnEe2tpsXn1xNlXA" isUnique="false" association="_jfzQmTjnEe2tpsXn1xNlXA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_jfzQmzjnEe2tpsXn1xNlXA" name="Fan"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_jfzQnDjnEe2tpsXn1xNlXA" name="Radiator"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_jfzQnTjnEe2tpsXn1xNlXA" name="Valve"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_jfzQnjjnEe2tpsXn1xNlXA" name="Pump"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_jfzQnzjnEe2tpsXn1xNlXA" name="Electric motor"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_jfzQoDjnEe2tpsXn1xNlXA" name="Coolant heater" isAbstract="true"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_jfzQoTjnEe2tpsXn1xNlXA" name="Battery" isAbstract="true"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_jfzQojjnEe2tpsXn1xNlXA" name="DC/DC" isAbstract="true"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_jfzQozjnEe2tpsXn1xNlXA" name="Charger" isAbstract="true"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_jfzQpDjnEe2tpsXn1xNlXA" name="Electric motor drive"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_jfzQpTjnEe2tpsXn1xNlXA" name="DC/DC 1">
+    <generalization xmi:id="_jfzQpjjnEe2tpsXn1xNlXA" general="_jfzQojjnEe2tpsXn1xNlXA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_jfzQpzjnEe2tpsXn1xNlXA" name="Charger 2">
+    <generalization xmi:id="_jfzQqDjnEe2tpsXn1xNlXA" general="_jfzQozjnEe2tpsXn1xNlXA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_jfzQqTjnEe2tpsXn1xNlXA" name="DC/DC 2">
+    <generalization xmi:id="_jfzQqjjnEe2tpsXn1xNlXA" general="_jfzQojjnEe2tpsXn1xNlXA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_jfzQqzjnEe2tpsXn1xNlXA" name="Charger 1">
+    <generalization xmi:id="_jfzQrDjnEe2tpsXn1xNlXA" general="_jfzQozjnEe2tpsXn1xNlXA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_jfzQrTjnEe2tpsXn1xNlXA" name="Battery 2">
+    <generalization xmi:id="_jfzQrjjnEe2tpsXn1xNlXA" general="_jfzQoTjnEe2tpsXn1xNlXA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_jfzQrzjnEe2tpsXn1xNlXA" name="Battery 1">
+    <generalization xmi:id="_jfzQsDjnEe2tpsXn1xNlXA" general="_jfzQoTjnEe2tpsXn1xNlXA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_jfzQsTjnEe2tpsXn1xNlXA" name="Electric motor drive 2">
+    <generalization xmi:id="_jfzQsjjnEe2tpsXn1xNlXA" general="_jfzQpDjnEe2tpsXn1xNlXA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_jfzQszjnEe2tpsXn1xNlXA" name="Electric motor drive 1">
+    <generalization xmi:id="_jfzQtDjnEe2tpsXn1xNlXA" general="_jfzQpDjnEe2tpsXn1xNlXA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_jfzQtTjnEe2tpsXn1xNlXA" name="sensor"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_jfzQtjjnEe2tpsXn1xNlXA" name="Battery sensor"/>
+  <packagedElement xmi:type="uml:Class" xmi:id="_jfzQtzjnEe2tpsXn1xNlXA" name="Motor 1">
+    <generalization xmi:id="_jfzQuDjnEe2tpsXn1xNlXA" general="_jfzQnzjnEe2tpsXn1xNlXA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_jfzQuTjnEe2tpsXn1xNlXA" name="Motor 2">
+    <generalization xmi:id="_jfzQujjnEe2tpsXn1xNlXA" general="_jfzQnzjnEe2tpsXn1xNlXA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_jfzQuzjnEe2tpsXn1xNlXA" name="Pump 2">
+    <generalization xmi:id="_jfzQvDjnEe2tpsXn1xNlXA" general="_jfzQnjjnEe2tpsXn1xNlXA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Class" xmi:id="_jfzQvTjnEe2tpsXn1xNlXA" name="Pump 1">
+    <generalization xmi:id="_jfzQvjjnEe2tpsXn1xNlXA" general="_jfzQnjjnEe2tpsXn1xNlXA"/>
+  </packagedElement>
+  <packagedElement xmi:type="uml:Activity" xmi:id="_jfzQvzjnEe2tpsXn1xNlXA" name="Activity">
+    <nestedClassifier xmi:type="uml:Collaboration" xmi:id="_jfzQwDjnEe2tpsXn1xNlXA" name="locals">
+      <ownedAttribute xmi:id="_jfzQwTjnEe2tpsXn1xNlXA" name="Central Buffer" aggregation="composite"/>
+    </nestedClassifier>
+    <ownedParameter xmi:id="_jfzQwjjnEe2tpsXn1xNlXA" name="opt" isUnique="false" effect="read">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jfzQwzjnEe2tpsXn1xNlXA" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jfzQxDjnEe2tpsXn1xNlXA"/>
+      <defaultValue xmi:type="uml:LiteralString" xmi:id="_jfzQxTjnEe2tpsXn1xNlXA" value=""/>
+    </ownedParameter>
+    <ownedParameter xmi:id="_jfzQxjjnEe2tpsXn1xNlXA" name="continuous" isUnique="false" isStream="true" effect="read">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jfzQxzjnEe2tpsXn1xNlXA" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jfzQyDjnEe2tpsXn1xNlXA" value="1"/>
+      <defaultValue xmi:type="uml:LiteralString" xmi:id="_jfzQyTjnEe2tpsXn1xNlXA" value=""/>
+    </ownedParameter>
+    <ownedParameter xmi:id="_jfzQyjjnEe2tpsXn1xNlXA" name="continuous1" isUnique="false" isStream="true" effect="read">
+      <type xmi:type="uml:PrimitiveType" href="pathmap://UML_LIBRARIES/UMLPrimitiveTypes.library.uml#String"/>
+      <upperValue xmi:type="uml:LiteralUnlimitedNatural" xmi:id="_jfzQyzjnEe2tpsXn1xNlXA" value="1"/>
+      <lowerValue xmi:type="uml:LiteralInteger" xmi:id="_jfzQzDjnEe2tpsXn1xNlXA" value="1"/>
+      <defaultValue xmi:type="uml:LiteralString" xmi:id="_jfzQzTjnEe2tpsXn1xNlXA" value=""/>
+    </ownedParameter>
+    <node xmi:type="uml:InitialNode" xmi:id="_jfzQzjjnEe2tpsXn1xNlXA" name="Initial Node" outgoing="_jfzQ4zjnEe2tpsXn1xNlXA"/>
+    <node xmi:type="uml:ActivityFinalNode" xmi:id="_jfzQzzjnEe2tpsXn1xNlXA" name="Activity Final Node" incoming="_jfzQ_DjnEe2tpsXn1xNlXA"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_jfzQ0DjnEe2tpsXn1xNlXA" name="Evaluate temperature" outgoing="_jfzQ5TjnEe2tpsXn1xNlXA" incoming="_jfzQ4zjnEe2tpsXn1xNlXA _jfzQ6TjnEe2tpsXn1xNlXA">
+      <outputValue xmi:id="_jfzQ0TjnEe2tpsXn1xNlXA" name="Output Pin" outgoing="_jfzQ5zjnEe2tpsXn1xNlXA">
+        <upperBound xmi:type="uml:LiteralString" xmi:id="_jfzQ0jjnEe2tpsXn1xNlXA" name="UpperBound" value="1"/>
+      </outputValue>
+      <body></body>
+    </node>
+    <node xmi:type="uml:ActivityParameterNode" xmi:id="_jfzQ0zjnEe2tpsXn1xNlXA" name="Temp" outgoing="_jfzQ6TjnEe2tpsXn1xNlXA" parameter="_jfzQxjjnEe2tpsXn1xNlXA">
+      <upperBound xmi:type="uml:LiteralString" xmi:id="_jfzQ1DjnEe2tpsXn1xNlXA" name="UpperBound" value="1"/>
+    </node>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_jfzQ1TjnEe2tpsXn1xNlXA" name="Control reaction" outgoing="_jfzQ6zjnEe2tpsXn1xNlXA" incoming="_jfzQ8DjnEe2tpsXn1xNlXA">
+      <inputValue xmi:id="_jfzQ1jjnEe2tpsXn1xNlXA" name="Input Pin" incoming="_jfzQ5zjnEe2tpsXn1xNlXA">
+        <upperBound xmi:type="uml:LiteralString" xmi:id="_jfzQ1zjnEe2tpsXn1xNlXA" name="UpperBound" value="1"/>
+      </inputValue>
+      <inputValue xmi:id="_jfzQ2DjnEe2tpsXn1xNlXA" name="Input Pin1" incoming="_jfzQ8jjnEe2tpsXn1xNlXA">
+        <upperBound xmi:type="uml:LiteralString" xmi:id="_jfzQ2TjnEe2tpsXn1xNlXA" name="UpperBound" value="1"/>
+      </inputValue>
+      <body></body>
+    </node>
+    <node xmi:type="uml:ActivityParameterNode" xmi:id="_jfzQ2jjnEe2tpsXn1xNlXA" name="System status" outgoing="_jfzQ7jjnEe2tpsXn1xNlXA" parameter="_jfzQyjjnEe2tpsXn1xNlXA">
+      <upperBound xmi:type="uml:LiteralString" xmi:id="_jfzQ2zjnEe2tpsXn1xNlXA" name="UpperBound" value="1"/>
+    </node>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_jfzQ3DjnEe2tpsXn1xNlXA" name="Evaluate system status" outgoing="_jfzQ8DjnEe2tpsXn1xNlXA" incoming="_jfzQ5TjnEe2tpsXn1xNlXA _jfzQ7jjnEe2tpsXn1xNlXA">
+      <outputValue xmi:id="_jfzQ3TjnEe2tpsXn1xNlXA" name="Output Pin" outgoing="_jfzQ8jjnEe2tpsXn1xNlXA">
+        <upperBound xmi:type="uml:LiteralString" xmi:id="_jfzQ3jjnEe2tpsXn1xNlXA" name="UpperBound" value="1"/>
+      </outputValue>
+      <body></body>
+    </node>
+    <node xmi:type="uml:DecisionNode" xmi:id="_jfzQ3zjnEe2tpsXn1xNlXA" name="Decision-Merge" outgoing="_jfzQ9DjnEe2tpsXn1xNlXA _jfzQ9zjnEe2tpsXn1xNlXA" incoming="_jfzQ6zjnEe2tpsXn1xNlXA"/>
+    <node xmi:type="uml:OpaqueAction" xmi:id="_jfzQ4DjnEe2tpsXn1xNlXA" name="Cool" outgoing="_jfzQ-jjnEe2tpsXn1xNlXA" incoming="_jfzQ9DjnEe2tpsXn1xNlXA">
+      <body></body>
+    </node>
+    <node xmi:type="uml:JoinNode" xmi:id="_jfzQ4TjnEe2tpsXn1xNlXA" name="Fork/Join" outgoing="_jfzQ_DjnEe2tpsXn1xNlXA" incoming="_jfzQ9zjnEe2tpsXn1xNlXA _jfzQ-jjnEe2tpsXn1xNlXA">
+      <joinSpec xmi:type="uml:LiteralString" xmi:id="_jfzQ4jjnEe2tpsXn1xNlXA" value="and"/>
+    </node>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_jfzQ4zjnEe2tpsXn1xNlXA" name="ControlFlow" source="_jfzQzjjnEe2tpsXn1xNlXA" target="_jfzQ0DjnEe2tpsXn1xNlXA">
+      <weight xmi:type="uml:LiteralInteger" xmi:id="_jfzQ5DjnEe2tpsXn1xNlXA" value="1"/>
+    </edge>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_jfzQ5TjnEe2tpsXn1xNlXA" name="ControlFlow" source="_jfzQ0DjnEe2tpsXn1xNlXA" target="_jfzQ3DjnEe2tpsXn1xNlXA">
+      <weight xmi:type="uml:LiteralInteger" xmi:id="_jfzQ5jjnEe2tpsXn1xNlXA" value="1"/>
+    </edge>
+    <edge xmi:type="uml:ObjectFlow" xmi:id="_jfzQ5zjnEe2tpsXn1xNlXA" name="ObjectFlow" source="_jfzQ0TjnEe2tpsXn1xNlXA" target="_jfzQ1jjnEe2tpsXn1xNlXA">
+      <weight xmi:type="uml:LiteralInteger" xmi:id="_jfzQ6DjnEe2tpsXn1xNlXA" value="1"/>
+    </edge>
+    <edge xmi:type="uml:ObjectFlow" xmi:id="_jfzQ6TjnEe2tpsXn1xNlXA" name="continuous" source="_jfzQ0zjnEe2tpsXn1xNlXA" target="_jfzQ0DjnEe2tpsXn1xNlXA">
+      <weight xmi:type="uml:LiteralInteger" xmi:id="_jfzQ6jjnEe2tpsXn1xNlXA" value="1"/>
+    </edge>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_jfzQ6zjnEe2tpsXn1xNlXA" name="ControlFlow" source="_jfzQ1TjnEe2tpsXn1xNlXA" target="_jfzQ3zjnEe2tpsXn1xNlXA">
+      <eAnnotations xmi:id="_jfzQ7DjnEe2tpsXn1xNlXA" source="Objing"/>
+      <weight xmi:type="uml:LiteralInteger" xmi:id="_jfzQ7TjnEe2tpsXn1xNlXA" value="1"/>
+    </edge>
+    <edge xmi:type="uml:ObjectFlow" xmi:id="_jfzQ7jjnEe2tpsXn1xNlXA" name="continuous" source="_jfzQ2jjnEe2tpsXn1xNlXA" target="_jfzQ3DjnEe2tpsXn1xNlXA">
+      <weight xmi:type="uml:LiteralInteger" xmi:id="_jfzQ7zjnEe2tpsXn1xNlXA" value="1"/>
+    </edge>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_jfzQ8DjnEe2tpsXn1xNlXA" name="ControlFlow" source="_jfzQ3DjnEe2tpsXn1xNlXA" target="_jfzQ1TjnEe2tpsXn1xNlXA">
+      <weight xmi:type="uml:LiteralInteger" xmi:id="_jfzQ8TjnEe2tpsXn1xNlXA" value="1"/>
+    </edge>
+    <edge xmi:type="uml:ObjectFlow" xmi:id="_jfzQ8jjnEe2tpsXn1xNlXA" name="ObjectFlow" source="_jfzQ3TjnEe2tpsXn1xNlXA" target="_jfzQ2DjnEe2tpsXn1xNlXA">
+      <weight xmi:type="uml:LiteralInteger" xmi:id="_jfzQ8zjnEe2tpsXn1xNlXA" value="1"/>
+    </edge>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_jfzQ9DjnEe2tpsXn1xNlXA" name="ControlFlow" source="_jfzQ3zjnEe2tpsXn1xNlXA" target="_jfzQ4DjnEe2tpsXn1xNlXA">
+      <eAnnotations xmi:id="_jfzQ9TjnEe2tpsXn1xNlXA" source="Objing"/>
+      <weight xmi:type="uml:LiteralInteger" xmi:id="_jfzQ9jjnEe2tpsXn1xNlXA" value="1"/>
+    </edge>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_jfzQ9zjnEe2tpsXn1xNlXA" name="ControlFlow" source="_jfzQ3zjnEe2tpsXn1xNlXA" target="_jfzQ4TjnEe2tpsXn1xNlXA">
+      <eAnnotations xmi:id="_jfzQ-DjnEe2tpsXn1xNlXA" source="Objing"/>
+      <weight xmi:type="uml:LiteralInteger" xmi:id="_jfzQ-TjnEe2tpsXn1xNlXA" value="1"/>
+    </edge>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_jfzQ-jjnEe2tpsXn1xNlXA" name="ControlFlow" source="_jfzQ4DjnEe2tpsXn1xNlXA" target="_jfzQ4TjnEe2tpsXn1xNlXA">
+      <weight xmi:type="uml:LiteralInteger" xmi:id="_jfzQ-zjnEe2tpsXn1xNlXA" value="1"/>
+    </edge>
+    <edge xmi:type="uml:ControlFlow" xmi:id="_jfzQ_DjnEe2tpsXn1xNlXA" name="ControlFlow" source="_jfzQ4TjnEe2tpsXn1xNlXA" target="_jfzQzzjnEe2tpsXn1xNlXA">
+      <weight xmi:type="uml:LiteralInteger" xmi:id="_jfzQ_TjnEe2tpsXn1xNlXA" value="1"/>
+    </edge>
+  </packagedElement>
+  <profileApplication xmi:id="_jhhuQDjnEe2tpsXn1xNlXA">
+    <eAnnotations xmi:id="_jhi8YDjnEe2tpsXn1xNlXA" source="http://www.eclipse.org/uml2/2.0.0/UML">
+      <references xmi:type="ecore:EPackage" href="sysml.profile.xmi#_jhCmIzjnEe2tpsXn1xNlXA"/>
+    </eAnnotations>
+    <appliedProfile href="sysml.profile.xmi#_jhCmHDjnEe2tpsXn1xNlXA"/>
+  </profileApplication>
+</uml:Model>
