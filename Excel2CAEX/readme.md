@@ -1,4 +1,4 @@
-Transformation explanation:
+Explanation of Excel2CAEX:
 
 1. **Loading Libraries**:  
    * **Line 1**: println("Loading libraries...");  
