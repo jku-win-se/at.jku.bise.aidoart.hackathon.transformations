@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="ASCII"?>
 <caex:CAEXFile xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:caex="http://www.dke.de/CAEX/300" xsi:schemaLocation="http://www.dke.de/CAEX/300 ../UML2CAEX3/caex30/CAEX30.ecore" fileName="VCE">
   <instanceHierarchy name="VCE">
-    <internalElement name="Pull Unit">
+    <internalElement name="Pull Unit AIDOaRt">
       <internalElement name="base_0">
-        <internalElement iD="{4400A614-5AE8-4D35-851B-9410E9F70CEF}" name="Pull Unit">
+        <internalElement iD="{4400A614-5AE8-4D35-851B-9410E9F70CEF}" name="Pull Unit AIDOaRt">
           <attribute name="id" value="{4400A614-5AE8-4D35-851B-9410E9F70CEF}"/>
           <attribute name="genericId" value="{4400A614-5AE8-4D35-851B-9410E9F70CEF}"/>
           <attribute name="origin" value="IFD"/>
         </internalElement>
       </internalElement>
       <internalElement name="variant_1">
-        <internalElement iD="f16504c1-0c67-48db-906a-a4873f098d13" name="Pull Unit">
+        <internalElement iD="f16504c1-0c67-48db-906a-a4873f098d13" name="Pull Unit AIDOaRt">
           <attribute name="id" value="f16504c1-0c67-48db-906a-a4873f098d13"/>
           <attribute name="genericId" value="cc04faa1-c525-43bb-9998-9bb782bade3e"/>
         </internalElement>

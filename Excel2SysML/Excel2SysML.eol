@@ -344,16 +344,16 @@ Association createAssociation(boolean end1IsNavigable,
 
 //"blocks1".println();
 for (e in blocks1) { 
-   if(false)e.name.println();
+   if(not e.isUndefined())e.name.println();
 }
 
 "block1_base".println();
 for (e in block1_base) { 
-   if(true)e.name.println();
+   if(not e.isUndefined())e.name.println();
 }
 "block1_variant".println();
 for (e in block1_variant) { 
-   if(true)e.name.println();
+   if(not e.isUndefined()) e.name.println();
 }
 "DONE".println();
 	blocks1.println();
