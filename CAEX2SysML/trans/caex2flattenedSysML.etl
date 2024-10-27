@@ -1,0 +1,50 @@
+pre {
+	"Running ETL".println();
+	var umlTool : new Native("org.eclipse.epsilon.emc.uml.dt.UMLTool");
+	var sysmlProfile = umlTool.getProfile("http://www.eclipse.org/papyrus/sysml/1.6/SysML/Blocks");
+	var ecoreProfile = umlTool.getProfileFromPathmapUri("pathmap://UML_PROFILES/Ecore.profile.uml");
+	
+	var activitiesProfile = sysmlProfile.getPackagedElement("Activities");
+	var allocationsProfile = sysmlProfile.getPackagedElement("Allocations");
+	var blocksProfile = sysmlProfile.getPackagedElement("Blocks");
+	var constraintBlocksProfile = sysmlProfile.getPackagedElement("ConstraintBlocks");
+	var deprecatedElementsProfile = sysmlProfile.getPackagedElement("DeprecatedElements");
+	var modelElementsProfile = sysmlProfile.getPackagedElement("ModelElements");
+	var portsAndFlowsProfile = sysmlProfile.getPackagedElement("PortsAndFlows");
+	var requirementsProfile = sysmlProfile.getPackagedElement("Requirements");
+
+	var amlProfile = AML!Profile.all.first();
+	
+	var blockStereotype = blocksProfile.getPackagedElement("Block");
+	var sucStereotype = amlProfile.getPackagedElement("SUC");	
+}
+
+post{
+
+}
+
+rule IE2Class 
+	transform ie : CAEX30!InternalElement
+	to pe : UML!Class {
+		pe.name = ie.name;
+	}
+
+
+rule FlattenUMLClasses
+  transform s : Source!Element
+  to t : Target!Package {
+  
+  // Create a new UML Package in the target model
+  t := new Target!Package;
+  t.name := 'FlattenedClassesPackage';
+  
+  // Iterate over all UML Classes in the source model
+  for (c in Source!Class.allInstances()) {
+    var newClass : Target!Class;
+    newClass := new Target!Class;
+    newClass.name := c.name;
+    
+    // Add the new class to the package
+    t.packagedElement.add(newClass);
+  }
+}

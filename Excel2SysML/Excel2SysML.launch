@@ -3,7 +3,7 @@
     <booleanAttribute key="fine_grained_profiling" value="false"/>
     <stringAttribute key="implementation_name" value="Parallel"/>
     <listAttribute key="models">
-        <listEntry value="#Thu Oct 24 13:19:32 CEST 2024&#13;&#10;storeOnDisposal=true&#13;&#10;expand=true&#13;&#10;aliases=SysMLModel&#13;&#10;modelFile=/Excel2SysML/SysMLExample2.uml&#13;&#10;cached=true&#13;&#10;name=UML&#13;&#10;concurrent=false&#13;&#10;type=UML&#13;&#10;readOnLoad=false"/>
+        <listEntry value="#Sun Oct 27 10:43:14 CET 2024&#13;&#10;storeOnDisposal=true&#13;&#10;expand=true&#13;&#10;aliases=SysMLModel&#13;&#10;modelFile=/Excel2SysML/SysMLModel.uml&#13;&#10;cached=true&#13;&#10;name=UML&#13;&#10;concurrent=false&#13;&#10;type=UML&#13;&#10;readOnLoad=false"/>
         <listEntry value="#Sun Feb 12 10:25:40 CET 2023&#13;&#10;storeOnDisposal=false&#13;&#10;aliases=&#13;&#10;name=Excel&#13;&#10;CONFIGURATION_FILE=&#13;&#10;type=ExcelModel&#13;&#10;readOnLoad=true&#13;&#10;SPREADSHEET_FILE=/Excel2SysML/VCE001.xlsx"/>
         <listEntry value="#Sun Feb 12 10:25:59 CET 2023&#13;&#10;storeOnDisposal=false&#13;&#10;expand=true&#13;&#10;aliases=&#13;&#10;modelFile=/AutomationMLProfile/AutomationML.profile.uml&#13;&#10;cached=true&#13;&#10;name=AML&#13;&#10;concurrent=false&#13;&#10;type=UML&#13;&#10;readOnLoad=true"/>
         <listEntry value="#Thu May 19 12:38:37 CEST 2022&#13;&#10;storeOnDisposal=false&#13;&#10;expand=true&#13;&#10;aliases=&#13;&#10;modelFile=/VCE_Profile/VCE_Profile.profile.uml&#13;&#10;cached=true&#13;&#10;name=VCE&#13;&#10;concurrent=false&#13;&#10;type=UML&#13;&#10;readOnLoad=true"/>

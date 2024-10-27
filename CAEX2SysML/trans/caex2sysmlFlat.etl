@@ -48,14 +48,14 @@ rule CAEX2SysML
 		
 		rootpackage.name="root_"+s.fileName;	
 			
-		if(true)("22222222"+s.instanceHierarchy.internalElement.first()).println();
-		if(true) var rr = s.instanceHierarchy.internalElement.first();
+		if(false)("22222222"+s.instanceHierarchy.internalElement.first()).println();
+		if(false) var rr = s.instanceHierarchy.internalElement.first();
 //		rootpackage.packagedElement::=rr;
-		if(true) rootpackage.appendEquivalentsOfChildrenOf(s.instanceHierarchy.internalElement);
+		if(false) rootpackage.appendEquivalentsOfChildrenOf(s.instanceHierarchy.internalElement);
 		//rootpackage.packagedElement::=rr;
 		//rootpackage.packagedElement.add(rr);
 		if(true)t.packagedElement.add(rootpackage);
-		if(true)t.addStereotypes(rootpackage); 
+		if(false)t.addStereotypes(rootpackage); 
 	}
 	
 operation Any addStereotypes(r : Any) {
@@ -76,7 +76,7 @@ operation Any appendEquivalentsOfChildrenOf(source : Any) {
 //			('inner child is: '+child.internalElement.notEmpty()).println();
 			if(child.internalElement.notEmpty()){
 				("-------+self :"+self).println();
-				("-------source :"+child.first()+" <---> "+source.first()).println();
+				//("-------source :"+child.first()+" <---> "+source.first()).println();
 				//source.first().packagedElement ::=child.first();
 				//('child.internalElement is::: ['+child.internalElement+"]--- "+self).println();
 				for (ch in child.internalElement) {
